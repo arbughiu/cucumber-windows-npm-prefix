@@ -1,0 +1,30 @@
+{
+    "root": true,
+    "extends": [
+      "plugin:import/typescript"
+    ],
+    "rules": {
+      "func-names": "off",
+      "consistent-this": "off"
+    },
+    "plugins": ["@typescript-eslint"],
+    "overrides": [
+      {
+        "files": ["*.ts"], 
+        "parserOptions": {
+          "project": ["tsconfig.json"]
+        }
+      }
+    ],
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+      "import/resolver": {
+        "typescript": {
+          "project": "tsconfig.json"
+        }
+      }
+    }
+  }
+    
